@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ChainetTech/data.git/static/css/main.028e6951.css",
+    "main.js": "/ChainetTech/data.git/static/js/main.d80bcae2.js",
+    "static/js/453.098152f8.chunk.js": "/ChainetTech/data.git/static/js/453.098152f8.chunk.js",
+    "index.html": "/ChainetTech/data.git/index.html",
+    "main.028e6951.css.map": "/ChainetTech/data.git/static/css/main.028e6951.css.map",
+    "main.d80bcae2.js.map": "/ChainetTech/data.git/static/js/main.d80bcae2.js.map",
+    "453.098152f8.chunk.js.map": "/ChainetTech/data.git/static/js/453.098152f8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.028e6951.css",
+    "static/js/main.d80bcae2.js"
+  ]
+}
