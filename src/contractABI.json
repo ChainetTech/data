@@ -1,0 +1,585 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "accountNo",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "ownerName",
+				"type": "string"
+			}
+		],
+		"name": "PropertyAdded",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "accountNo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ownerName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "images",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "propertyAddress",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "city",
+						"type": "string"
+					}
+				],
+				"internalType": "struct PropertyRecords.PropertyBasicInfo",
+				"name": "_basicInfo",
+				"type": "tuple"
+			},
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "grantor",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "grantee",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "saleDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "salePrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "saleType",
+						"type": "string"
+					}
+				],
+				"internalType": "struct PropertyRecords.PropertySaleInfo",
+				"name": "_saleInfo",
+				"type": "tuple"
+			},
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "acres",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "assessedValue",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "heatedSqFt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "subdivision",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "secTwpRng",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "legalDescr",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "landSqFt",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct PropertyRecords.PropertyDetails",
+				"name": "_details",
+				"type": "tuple"
+			}
+		],
+		"name": "addProperty",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getPropertyBasicInfo",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "accountNo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ownerName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "images",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "propertyAddress",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "city",
+						"type": "string"
+					}
+				],
+				"internalType": "struct PropertyRecords.PropertyBasicInfo",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getPropertyCount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getPropertyDetails",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "acres",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "assessedValue",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "heatedSqFt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "subdivision",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "secTwpRng",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "legalDescr",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "landSqFt",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct PropertyRecords.PropertyDetails",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getPropertySaleInfo",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "grantor",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "grantee",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "saleDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "salePrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "saleType",
+						"type": "string"
+					}
+				],
+				"internalType": "struct PropertyRecords.PropertySaleInfo",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "properties",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "accountNo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ownerName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "images",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "propertyAddress",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "city",
+						"type": "string"
+					}
+				],
+				"internalType": "struct PropertyRecords.PropertyBasicInfo",
+				"name": "basicInfo",
+				"type": "tuple"
+			},
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "grantor",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "grantee",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "saleDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "salePrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "saleType",
+						"type": "string"
+					}
+				],
+				"internalType": "struct PropertyRecords.PropertySaleInfo",
+				"name": "saleInfo",
+				"type": "tuple"
+			},
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "acres",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "assessedValue",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "heatedSqFt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "subdivision",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "secTwpRng",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "legalDescr",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "landSqFt",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct PropertyRecords.PropertyDetails",
+				"name": "details",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			},
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "accountNo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ownerName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "images",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "propertyAddress",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "city",
+						"type": "string"
+					}
+				],
+				"internalType": "struct PropertyRecords.PropertyBasicInfo",
+				"name": "_basicInfo",
+				"type": "tuple"
+			}
+		],
+		"name": "updatePropertyBasicInfo",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			},
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "acres",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "assessedValue",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "heatedSqFt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "subdivision",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "secTwpRng",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "legalDescr",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "landSqFt",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct PropertyRecords.PropertyDetails",
+				"name": "_details",
+				"type": "tuple"
+			}
+		],
+		"name": "updatePropertyDetails",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			},
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "grantor",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "grantee",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "saleDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "salePrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "saleType",
+						"type": "string"
+					}
+				],
+				"internalType": "struct PropertyRecords.PropertySaleInfo",
+				"name": "_saleInfo",
+				"type": "tuple"
+			}
+		],
+		"name": "updatePropertySaleInfo",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
